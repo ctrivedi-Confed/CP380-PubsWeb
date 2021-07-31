@@ -1,0 +1,24 @@
+﻿@page
+@model CP380_PubsWeb.Pages.Employees.IndexModel
+@{
+    ViewData["Title"] = "Employees Name";
+}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model.Employees)
+            {
+                <tr>
+                    <td>@t.Emp_id</td>
+                    <td>@t.First_name  @t.Last_name</td>
+                
+                </tr>
+             }
+            </tbody>
+        </table>
